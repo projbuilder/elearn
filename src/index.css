@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --background: 0 0% 100%;
+    --foreground: 230 15% 15%;
+    
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 230 15% 15%;
+    --card-glass: 240 100% 99% / 0.7;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 15% 15%;
+    
+    /* Primary system */
+    --primary: 240 100% 70%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 240 100% 85%;
+    
+    /* Secondary system */
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 230 15% 15%;
+    
+    /* Muted system */
+    --muted: 240 20% 96%;
+    --muted-foreground: 230 10% 45%;
+    
+    /* Accent system */
+    --accent: 200 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Status colors */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 120 100% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 100% 55%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Borders and inputs */
+    --border: 240 20% 90%;
+    --input: 240 20% 96%;
+    --ring: 240 100% 70%;
+    
+    /* Federated Learning Theme Colors */
+    --fl-primary: 240 100% 70%;
+    --fl-primary-foreground: 0 0% 100%;
+    --fl-secondary: 280 100% 75%;
+    --fl-secondary-foreground: 0 0% 100%;
+    --fl-accent: 200 100% 60%;
+    --fl-accent-foreground: 0 0% 100%;
+    --fl-success: 120 100% 50%;
+    --fl-success-foreground: 0 0% 100%;
+    --fl-warning: 45 100% 55%;
+    --fl-warning-foreground: 0 0% 100%;
+    
+    /* Glassmorphism */
+    --glass-bg: 240 100% 99% / 0.1;
+    --glass-border: 240 100% 95% / 0.2;
+    --glass-shadow: 240 50% 50% / 0.1;
+    --glass-blur: blur(10px);
+    
+    /* Gradients */
+    --gradient-fl-primary: linear-gradient(135deg, hsl(240 100% 70%), hsl(280 100% 75%));
+    --gradient-fl-neural: linear-gradient(45deg, hsl(200 100% 60%), hsl(240 100% 70%), hsl(280 100% 75%));
+    --gradient-fl-data: linear-gradient(90deg, hsl(120 100% 50%), hsl(200 100% 60%));
+    --gradient-fl-privacy: linear-gradient(180deg, hsl(280 100% 75%), hsl(240 100% 70%));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px hsl(240 50% 50% / 0.05);
+    --shadow-md: 0 4px 12px hsl(240 50% 50% / 0.1);
+    --shadow-lg: 0 8px 25px hsl(240 50% 50% / 0.15);
+    --shadow-xl: 0 12px 35px hsl(240 50% 50% / 0.2);
+    --shadow-glow: 0 0 40px hsl(240 100% 70% / 0.4);
+    --shadow-elegant: 0 10px 30px -10px hsl(240 100% 70% / 0.3);
+    
+    /* Animation and transition */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Border radius */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Chart colors */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --background: 230 25% 8%;
+    --foreground: 240 20% 95%;
+    
+    /* Cards */
+    --card: 230 25% 10%;
+    --card-foreground: 240 20% 95%;
+    --card-glass: 230 25% 15% / 0.8;
+    
+    --popover: 230 25% 10%;
+    --popover-foreground: 240 20% 95%;
+    
+    /* Primary system dark */
+    --primary: 240 100% 75%;
+    --primary-foreground: 230 25% 8%;
+    --primary-glow: 240 100% 60%;
+    
+    /* Secondary system dark */
+    --secondary: 230 25% 15%;
+    --secondary-foreground: 240 20% 95%;
+    
+    /* Muted system dark */
+    --muted: 230 25% 15%;
+    --muted-foreground: 240 10% 60%;
+    
+    /* Accent system dark */
+    --accent: 200 100% 65%;
+    --accent-foreground: 230 25% 8%;
+    
+    /* Status colors dark */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 240 20% 95%;
+    
+    /* Borders and inputs dark */
+    --border: 230 25% 20%;
+    --input: 230 25% 15%;
+    --ring: 240 100% 75%;
+    
+    /* FL colors dark */
+    --fl-primary: 240 100% 75%;
+    --fl-secondary: 280 100% 80%;
+    --fl-accent: 200 100% 65%;
+    --fl-success: 120 100% 50%;
+    --fl-warning: 45 100% 55%;
+    
+    /* Glassmorphism dark */
+    --glass-bg: 230 25% 15% / 0.8;
+    --glass-border: 240 20% 25% / 0.3;
+    
+    /* Shadows dark */
+    --shadow-sm: 0 2px 4px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 8px 25px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 12px 35px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(240 100% 70% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Glassmorphism utilities */
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-lg);
+  }
+
+  .glass-nav {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid hsl(var(--glass-border));
+  }
+  
+  .glass-border {
+    @apply border-border/30;
+  }
+
+  /* FL specific animations */
+  @keyframes fl-pulse {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes data-flow {
+    0% {
+      transform: translateX(-100%) scale(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0%) scale(1);
+    }
+    100% {
+      transform: translateX(100%) scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes neural-connect {
+    0% {
+      stroke-dashoffset: 100;
+      opacity: 0.5;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8);
+    }
+  }
+
+  /* Interactive elements */
+  .fl-node {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .fl-node:hover {
+    @apply scale-110;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .neural-connection {
+    stroke-dasharray: 5 5;
+    animation: neural-connect 2s ease-in-out infinite;
+  }
+
+  .data-particle {
+    animation: data-flow 3s linear infinite;
+  }
+
+  /* Gradient backgrounds */
+  .bg-fl-primary {
+    background: var(--gradient-fl-primary);
+  }
+
+  .bg-fl-neural {
+    background: var(--gradient-fl-neural);
+  }
+
+  .bg-fl-data {
+    background: var(--gradient-fl-data);
+  }
+
+  .bg-fl-privacy {
+    background: var(--gradient-fl-privacy);
+  }
+
+  /* Text gradients */
+  .text-fl-gradient {
+    background: var(--gradient-fl-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Scroll animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
+
+@layer components {
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
