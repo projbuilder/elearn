@@ -1,0 +1,10 @@
+project_id = "kvedawllemtyfkxeenll"
+
+[functions.ai-tutor-chat]
+verify_jwt = false
+
+[functions.fl-coordinator]
+verify_jwt = false
+
+[functions.fl-training]
+verify_jwt = false
