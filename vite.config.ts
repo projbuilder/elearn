@@ -1,11 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
   build: {
-    // Optimize chunk splitting to reduce number of files
     rollupOptions: {
       output: {
         manualChunks: {
@@ -14,10 +19,7 @@ export default defineConfig({
         }
       }
     },
-    // Reduce number of chunk files
     chunkSizeWarningLimit: 1000,
-    // Source maps can be disabled for production
     sourcemap: false
   }
 })
-
