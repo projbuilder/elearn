@@ -1,0 +1,25 @@
+{
+  "name": "cloud-elearning-api",
+  "version": "1.0.0",
+  "description": "Azure Functions for Cloud E-Learning Platform",
+  "scripts": {
+    "start": "func start",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/openai": "^1.0.0",
+    "@azure/storage-blob": "^12.17.0",
+    "@azure/ai-form-recognizer": "^5.0.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "openai": "^4.20.0",
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.6.0",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
